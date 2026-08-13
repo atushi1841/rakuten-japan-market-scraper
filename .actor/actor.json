@@ -1,0 +1,9 @@
+{
+  "actorSpecification": 1,
+  "name": "rakuten-market-scraper",
+  "title": "Rakuten Market Scraper",
+  "description": "Scrape product listings and price statistics from Rakuten Ichiba (Japan's largest e-commerce marketplace).",
+  "version": "0.1",
+  "input": "./INPUT_SCHEMA.json",
+  "dockerfile": "./Dockerfile"
+}

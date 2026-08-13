@@ -1,0 +1,51 @@
+{
+  "title": "Rakuten Market Scraper",
+  "type": "object",
+  "schemaVersion": 1,
+  "properties": {
+    "searchKeyword": {
+      "title": "Search Keyword",
+      "type": "string",
+      "description": "Keyword to search on Rakuten Ichiba (e.g. ルイヴィトン, ポケモン, iPhone)",
+      "editor": "textfield",
+      "prefill": "ルイヴィトン"
+    },
+    "maxItems": {
+      "title": "Max Items",
+      "type": "integer",
+      "description": "Maximum number of products to return",
+      "editor": "number",
+      "prefill": 30,
+      "default": 30,
+      "maximum": 100,
+      "minimum": 1
+    },
+    "maxPages": {
+      "title": "Max Pages",
+      "type": "integer",
+      "description": "Number of search result pages to crawl (each page ~45 products)",
+      "editor": "number",
+      "prefill": 2,
+      "default": 2,
+      "maximum": 20,
+      "minimum": 1
+    },
+    "statsMode": {
+      "title": "Stats Mode",
+      "type": "boolean",
+      "description": "Return price statistics (count/min/max/avg/median) instead of raw listings",
+      "editor": "checkbox",
+      "prefill": false,
+      "default": false
+    },
+    "proxyConfiguration": {
+      "title": "Proxy Configuration",
+      "type": "object",
+      "description": "Proxy settings (auto on free plan)",
+      "editor": "proxy",
+      "prefill": {
+        "useApifyProxy": true
+      }
+    }
+  }
+}
