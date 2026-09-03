@@ -5,5 +5,104 @@
   "description": "Scrape product listings and price statistics from Rakuten Ichiba (Japan's largest e-commerce marketplace).",
   "version": "0.1",
   "input": "./INPUT_SCHEMA.json",
-  "dockerfile": "./Dockerfile"
+  "dockerfile": "./Dockerfile",
+  "outputSchema": {
+    "actorOutputSchemaVersion": 1,
+    "title": "Rakuten Market Results",
+    "description": "Product listings or aggregated price statistics from Rakuten Ichiba",
+    "type": "object",
+    "properties": {
+      "statsType": {
+        "title": "Statstype",
+        "type": "string",
+        "description": "Type identifier, e.g. japan-rakuten-price (only in stats mode)",
+        "template": "{{statsType}}"
+      },
+      "keyword": {
+        "title": "Keyword",
+        "type": "string",
+        "description": "The search keyword used (only in stats mode)",
+        "template": "{{keyword}}"
+      },
+      "count": {
+        "title": "Count",
+        "type": "string",
+        "description": "Number of items with a valid price (only in stats mode)",
+        "template": "{{count}}"
+      },
+      "priceMin": {
+        "title": "Pricemin",
+        "type": "string",
+        "description": "Minimum price in JPY (only in stats mode)",
+        "template": "{{priceMin}}"
+      },
+      "priceMax": {
+        "title": "Pricemax",
+        "type": "string",
+        "description": "Maximum price in JPY (only in stats mode)",
+        "template": "{{priceMax}}"
+      },
+      "priceAvg": {
+        "title": "Priceavg",
+        "type": "string",
+        "description": "Average price in JPY (only in stats mode)",
+        "template": "{{priceAvg}}"
+      },
+      "priceMedian": {
+        "title": "Pricemedian",
+        "type": "string",
+        "description": "Median price in JPY (only in stats mode)",
+        "template": "{{priceMedian}}"
+      },
+      "sampleItems": {
+        "title": "Sampleitems",
+        "type": "string",
+        "description": "Up to 3 sample listings (only in stats mode)",
+        "template": "{{sampleItems}}"
+      },
+      "collectedAt": {
+        "title": "Collectedat",
+        "type": "string",
+        "description": "Collection timestamp (only in stats mode)",
+        "template": "{{collectedAt}}"
+      },
+      "title": {
+        "title": "Title",
+        "type": "string",
+        "description": "Product title (list mode)",
+        "template": "{{title}}"
+      },
+      "price": {
+        "title": "Price",
+        "type": "string",
+        "description": "Price display text (list mode)",
+        "template": "{{price}}"
+      },
+      "price_jpy": {
+        "title": "Pricejpy",
+        "type": "string",
+        "description": "Numeric price in JPY (list mode)",
+        "template": "{{price_jpy}}"
+      },
+      "shop": {
+        "title": "Shop",
+        "type": "string",
+        "description": "Shop name (list mode)",
+        "template": "{{shop}}"
+      },
+      "review": {
+        "title": "Review",
+        "type": "string",
+        "description": "Review text (list mode)",
+        "template": "{{review}}"
+      },
+      "detail_url": {
+        "title": "Detailurl",
+        "type": "string",
+        "description": "Product detail URL (list mode)",
+        "template": "{{detail_url}}"
+      }
+    },
+    "required": []
+  }
 }
