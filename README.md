@@ -29,3 +29,8 @@ When `statsMode=true`, returns a single statistics object: `statsType`, `keyword
 - Market price research for brands and products
 - Price monitoring and comparison
 - E-commerce data for resale or analysis
+
+## MCP Registry
+
+This server is registered on the official [MCP Registry](https://registry.modelcontextprotocol.io).
+Find it via search: [rakuten-japan-market-scraper](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rakuten-japan-market-scraper)
