@@ -34,3 +34,8 @@ When `statsMode=true`, returns a single statistics object: `statsType`, `keyword
 
 This server is registered on the official [MCP Registry](https://registry.modelcontextprotocol.io).
 Find it via search: [rakuten-japan-market-scraper](https://registry.modelcontextprotocol.io/v0/servers?search=io.github.rakuten-japan-market-scraper)
+
+## Apify Store
+
+- [rakuten-market-scraper](https://apify.com/store/actors/rakuten-market-scraper) — Apify Store actor (total runs: 44)
+- [rakuten-japan-mcp](https://apify.com/store/actors/rakuten-japan-mcp) — Apify Store actor (total runs: 49)
